@@ -17,7 +17,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
+} from '@/form';
 import {
   Select,
   SelectContent,
@@ -185,8 +185,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-serif font-bold mb-2">Email Us</h3>
                     <p className="text-foreground/60 mb-4">Our team is here to help you with any questions.</p>
-                    <a href="mailto:hello@vizox.studio" className="text-primary font-medium hover:underline">
-                      hello@vizox.studio
+                    <a href="mailto:contactvizox@gmail.com" className="text-primary font-medium hover:underline">
+                      contactvizox@gmail.com
                     </a>
                   </div>
                 </div>
@@ -198,8 +198,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-serif font-bold mb-2">WhatsApp</h3>
                     <p className="text-foreground/60 mb-4">Quick chat for urgent inquiries.</p>
-                    <a href="#" className="text-green-500 font-medium hover:underline">
-                      +1 (555) 000-0000
+                    <a href="https://wa.me/918271754978" target="_blank" rel="noopener noreferrer" className="text-green-500 font-medium hover:underline">
+                      +91 8271754978
                     </a>
                   </div>
                 </div>
@@ -210,7 +210,7 @@ const Contact = () => {
                     <a href="#" className="w-12 h-12 rounded-full glass flex items-center justify-center text-foreground/60 hover:text-primary hover:border-primary transition-all">
                       <Twitter size={20} />
                     </a>
-                    <a href="#" className="w-12 h-12 rounded-full glass flex items-center justify-center text-foreground/60 hover:text-primary hover:border-primary transition-all">
+                    <a href="https://www.instagram.com/thevizox" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass flex items-center justify-center text-foreground/60 hover:text-primary hover:border-primary transition-all">
                       <Instagram size={20} />
                     </a>
                     <a href="#" className="w-12 h-12 rounded-full glass flex items-center justify-center text-foreground/60 hover:text-primary hover:border-primary transition-all">

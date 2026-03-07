@@ -14,7 +14,7 @@ const Footer = () => {
           </p>
           <div className="flex gap-4">
             <a href="#" className="text-foreground/40 hover:text-primary transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="text-foreground/40 hover:text-primary transition-colors"><Instagram size={20} /></a>
+            <a href="https://www.instagram.com/thevizox" target="_blank" rel="noopener noreferrer" className="text-foreground/40 hover:text-primary transition-colors"><Instagram size={20} /></a>
             <a href="#" className="text-foreground/40 hover:text-primary transition-colors"><Linkedin size={20} /></a>
             <a href="#" className="text-foreground/40 hover:text-primary transition-colors"><Github size={20} /></a>
           </div>
