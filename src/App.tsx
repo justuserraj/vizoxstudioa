@@ -9,6 +9,8 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:id" element={<CaseStudyDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
