@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { PortfolioItem } from '../types';
-import { Play } from 'lucide-react';
+import { Play, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface PortfolioCardProps {
   item: PortfolioItem;
@@ -16,21 +17,31 @@ const PortfolioCard = ({ item, index }: PortfolioCardProps) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group relative overflow-hidden rounded-2xl aspect-[4/3]"
     >
-      <img
-        src={item.imageUrl}
-        alt={item.title}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-        <span className="text-primary text-sm font-medium mb-2">{item.category}</span>
-        <h3 className="text-2xl font-serif font-bold mb-2">{item.title}</h3>
-        <p className="text-foreground/70 text-sm line-clamp-2 mb-4">{item.description}</p>
-        {item.mediaType === 'video' && (
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-primary/80 flex items-center justify-center text-white">
-            <Play fill="currentColor" />
+      <Link to={`/portfolio/${item.id}`} className="block w-full h-full">
+        <img
+          src={item.imageUrl}
+          alt={item.title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+          <div className="flex justify-between items-end">
+            <div>
+              <span className="text-primary text-sm font-medium mb-2 block">{item.category}</span>
+              <h3 className="text-2xl font-serif font-bold mb-2">{item.title}</h3>
+              <p className="text-foreground/70 text-sm line-clamp-2 mb-4">{item.description}</p>
+            </div>
+            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white mb-4 shrink-0">
+              <ArrowUpRight size={24} />
+            </div>
           </div>
-        )}
-      </div>
+          
+          {item.mediaType === 'video' && (
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-primary/80 flex items-center justify-center text-white">
+              <Play fill="currentColor" />
+            </div>
+          )}
+        </div>
+      </Link>
     </motion.div>
   );
 };

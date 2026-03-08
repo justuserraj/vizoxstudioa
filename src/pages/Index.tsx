@@ -6,6 +6,8 @@ import Footer from '@/components/Footer';
 import SectionHeading from '@/components/SectionHeading';
 import ServiceCard from '@/components/ServiceCard';
 import PortfolioCard from '@/components/PortfolioCard';
+import ClientLogos from '@/components/ClientLogos';
+import Testimonials from '@/components/Testimonials';
 import { services, portfolioItems } from '@/data/mockData';
 
 const Index = () => {
@@ -69,6 +71,9 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Client Logos Section */}
+        <ClientLogos />
+
         {/* Services Section */}
         <section className="py-24 px-6 bg-background">
           <div className="max-w-7xl mx-auto">
@@ -104,6 +109,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* Testimonials Section */}
+        <Testimonials />
 
         {/* CTA Section */}
         <section className="py-32 px-6 relative overflow-hidden">

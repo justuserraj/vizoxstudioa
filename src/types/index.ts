@@ -18,4 +18,23 @@ export type PortfolioItem = {
   mediaType: 'image' | 'video';
   mediaUrl: string;
   url?: string;
+  challenge?: string;
+  solution?: string;
+  results?: string;
+  additionalImages?: string[];
+};
+
+export type Testimonial = {
+  id: string;
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  avatarUrl: string;
+};
+
+export type ClientLogo = {
+  id: string;
+  name: string;
+  logoUrl: string;
 };
