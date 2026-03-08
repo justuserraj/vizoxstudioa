@@ -55,22 +55,22 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-grow pt-32">
-        <section className="px-6 mb-24">
+      <main className="flex-grow pt-24 sm:pt-32">
+        <section className="px-4 sm:px-6 mb-16 sm:mb-24">
           <div className="max-w-7xl mx-auto">
             <SectionHeading title="Let's Talk" subtitle="Contact Us" />
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
               {/* Contact Form */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="glass p-8 md:p-12 rounded-3xl"
+                className="glass p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl"
               >
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField
                         control={form.control}
                         name="name"
@@ -99,7 +99,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField
                         control={form.control}
                         name="service"
@@ -155,7 +155,7 @@ const Contact = () => {
                           <FormControl>
                             <Textarea 
                               placeholder="Tell us about your project..." 
-                              className="bg-background/50 min-h-[150px]" 
+                              className="bg-background/50 min-h-[120px] sm:min-h-[150px]" 
                               {...field} 
                             />
                           </FormControl>
@@ -164,7 +164,7 @@ const Contact = () => {
                       )}
                     />
 
-                    <Button type="submit" className="w-full py-6 text-lg font-bold btn-glow">
+                    <Button type="submit" className="w-full py-6 text-base sm:text-lg font-bold btn-glow">
                       Send Message
                     </Button>
                   </form>
@@ -176,45 +176,45 @@ const Contact = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-8"
+                className="space-y-6 sm:space-y-8"
               >
-                <div className="glass p-8 rounded-3xl flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                    <Mail size={28} />
+                <div className="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                    <Mail size={24} className="sm:w-7 sm:h-7" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-serif font-bold mb-2">Email Us</h3>
-                    <p className="text-foreground/60 mb-4">Our team is here to help you with any questions.</p>
-                    <a href="mailto:contactvizox@gmail.com" className="text-primary font-medium hover:underline">
+                    <h3 className="text-lg sm:text-xl font-serif font-bold mb-2">Email Us</h3>
+                    <p className="text-sm sm:text-base text-foreground/60 mb-3 sm:mb-4">Our team is here to help you with any questions.</p>
+                    <a href="mailto:contactvizox@gmail.com" className="text-primary font-medium hover:underline break-all">
                       contactvizox@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="glass p-8 rounded-3xl flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500 shrink-0">
-                    <MessageSquare size={28} />
+                <div className="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500 shrink-0">
+                    <MessageSquare size={24} className="sm:w-7 sm:h-7" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-serif font-bold mb-2">WhatsApp</h3>
-                    <p className="text-foreground/60 mb-4">Quick chat for urgent inquiries.</p>
+                    <h3 className="text-lg sm:text-xl font-serif font-bold mb-2">WhatsApp</h3>
+                    <p className="text-sm sm:text-base text-foreground/60 mb-3 sm:mb-4">Quick chat for urgent inquiries.</p>
                     <a href="https://wa.me/918271754978" target="_blank" rel="noopener noreferrer" className="text-green-500 font-medium hover:underline">
                       +91 8271754978
                     </a>
                   </div>
                 </div>
 
-                <div className="glass p-8 rounded-3xl">
-                  <h3 className="text-xl font-serif font-bold mb-6">Follow Us</h3>
-                  <div className="flex gap-6">
-                    <a href="#" className="w-12 h-12 rounded-full glass flex items-center justify-center text-foreground/60 hover:text-primary hover:border-primary transition-all">
-                      <Twitter size={20} />
+                <div className="glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl">
+                  <h3 className="text-lg sm:text-xl font-serif font-bold mb-6">Follow Us</h3>
+                  <div className="flex flex-wrap gap-4 sm:gap-6">
+                    <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full glass flex items-center justify-center text-foreground/60 hover:text-primary hover:border-primary transition-all">
+                      <Twitter size={18} className="sm:w-5 sm:h-5" />
                     </a>
-                    <a href="https://www.instagram.com/thevizox" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass flex items-center justify-center text-foreground/60 hover:text-primary hover:border-primary transition-all">
-                      <Instagram size={20} />
+                    <a href="https://www.instagram.com/thevizox" target="_blank" rel="noopener noreferrer" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full glass flex items-center justify-center text-foreground/60 hover:text-primary hover:border-primary transition-all">
+                      <Instagram size={18} className="sm:w-5 sm:h-5" />
                     </a>
-                    <a href="#" className="w-12 h-12 rounded-full glass flex items-center justify-center text-foreground/60 hover:text-primary hover:border-primary transition-all">
-                      <Linkedin size={20} />
+                    <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full glass flex items-center justify-center text-foreground/60 hover:text-primary hover:border-primary transition-all">
+                      <Linkedin size={18} className="sm:w-5 sm:h-5" />
                     </a>
                   </div>
                 </div>

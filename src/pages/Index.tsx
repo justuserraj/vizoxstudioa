@@ -16,10 +16,10 @@ const Index = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center justify-center px-6 overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden py-20">
           <div className="absolute inset-0 z-0">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] animate-pulse delay-1000" />
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-[80px] md:blur-[120px] animate-pulse" />
+            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-purple-600/10 rounded-full blur-[80px] md:blur-[120px] animate-pulse delay-1000" />
           </div>
 
           <div className="max-w-5xl mx-auto text-center relative z-10">
@@ -27,7 +27,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-primary font-medium tracking-widest uppercase text-sm mb-6 block"
+              className="text-primary font-medium tracking-widest uppercase text-xs sm:text-sm mb-4 sm:mb-6 block"
             >
               Creative Agency Studio
             </motion.span>
@@ -35,7 +35,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-5xl md:text-8xl font-serif font-bold leading-tight mb-8"
+              className="text-4xl sm:text-6xl md:text-8xl font-serif font-bold leading-tight mb-6 sm:mb-8"
             >
               Ideas that <span className="gradient-text">Inspire.</span><br />
               Code that <span className="gradient-text">Performs.</span>
@@ -44,7 +44,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg md:text-xl text-foreground/60 mb-10 max-w-2xl mx-auto leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-foreground/60 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-4"
             >
               We are a digital-first creative studio specializing in building premium brands and high-performance digital products.
             </motion.p>
@@ -52,17 +52,17 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4"
             >
               <Link
                 to="/portfolio"
-                className="px-8 py-4 gradient-flow text-white rounded-full font-bold text-lg btn-glow flex items-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 gradient-flow text-white rounded-full font-bold text-base sm:text-lg btn-glow flex items-center justify-center gap-2"
               >
                 View Our Work <ArrowRight size={20} />
               </Link>
               <Link
                 to="/contact"
-                className="px-8 py-4 glass text-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors"
+                className="w-full sm:w-auto px-8 py-4 glass text-white rounded-full font-bold text-base sm:text-lg hover:bg-white/10 transition-colors flex items-center justify-center"
               >
                 Let's Talk
               </Link>
@@ -71,14 +71,14 @@ const Index = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-24 px-6 bg-background">
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-background">
           <div className="max-w-7xl mx-auto">
             <SectionHeading 
               title="Our Expertise" 
               subtitle="Services" 
               align="center"
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, index) => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
@@ -87,18 +87,18 @@ const Index = () => {
         </section>
 
         {/* Featured Portfolio */}
-        <section className="py-24 px-6 bg-card/30">
+        <section className="py-16 sm:py-24 px-4 sm:px-6 bg-card/30">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12 gap-6">
               <SectionHeading 
                 title="Selected Projects" 
                 subtitle="Portfolio" 
               />
-              <Link to="/portfolio" className="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all mb-12">
+              <Link to="/portfolio" className="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all mb-4 md:mb-12">
                 View All Projects <ArrowRight size={20} />
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {portfolioItems.slice(0, 2).map((item, index) => (
                 <PortfolioCard key={item.id} item={item} index={index} />
               ))}
@@ -110,19 +110,19 @@ const Index = () => {
         <Testimonials />
 
         {/* CTA Section */}
-        <section className="py-32 px-6 relative overflow-hidden">
+        <section className="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
           <div className="absolute inset-0 gradient-flow opacity-10" />
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold mb-6 sm:mb-8">
               Have a project in mind? <br />
               <span className="gradient-text">Let's build something great.</span>
             </h2>
-            <p className="text-xl text-foreground/60 mb-12">
+            <p className="text-lg sm:text-xl text-foreground/60 mb-8 sm:mb-12 px-4">
               We're always looking for new challenges and exciting projects to work on.
             </p>
             <Link
               to="/contact"
-              className="px-10 py-5 bg-primary text-white rounded-full font-bold text-xl btn-glow inline-flex items-center gap-2"
+              className="px-8 sm:px-10 py-4 sm:py-5 bg-primary text-white rounded-full font-bold text-lg sm:text-xl btn-glow inline-flex items-center gap-2"
             >
               Get in Touch <ArrowRight size={24} />
             </Link>
