@@ -13,7 +13,6 @@ const CaseStudyDetail = () => {
   const project = portfolioItems[projectIndex];
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     if (!project) {
       navigate('/portfolio');
     }
